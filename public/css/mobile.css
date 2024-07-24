@@ -1,0 +1,16 @@
+input,
+textarea,
+button,
+span,
+select,
+div,
+a,
+table {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:visited,
+a:active {
+    outline: none;
+}

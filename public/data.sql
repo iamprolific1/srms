@@ -1,0 +1,45 @@
+CREATE DATABASE srms;
+
+USE srms;
+DROP TABLE IF EXISTS `admin`
+CREATE TABLE IF NOT EXISTS `admin`(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    verificationCode INT(6) NOT NULL,
+    otp_created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    password VARCHAR(255) NOT NULL
+);
+
+-- STUDENT'S TABLE
+DROP TABLE IF EXISTS `students`;
+
+CREATE TABLE IF NOT EXISTS `students`(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    fullname VARCHAR(100) NOT NULL,
+    matricNumber VARCHAR(30) NOT NULL UNIQUE,
+    department VARCHAR(100) NOT NULL,
+    faculty VARCHAR(100) NOT NULL,
+    level INT(3) NOT NULL,
+    academicSession VARCHAR(16) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+--RESULT TABLE
+DROP TABLE IF EXISTS `results`;
+
+CREATE TABLE IF NOT EXISTS `results`(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    student_Name VARCHAR(150) NOT NULL,
+    student_Matric_Number VARCHAR(30) NOT NULL UNIQUE,
+    student_Department VARCHAR(255) NOT NULL,
+    student_Faculty VARCHAR(255) NOT NULL,
+    student_Level INT(3) NOT NULL,
+    academic_Session VARCHAR(16) NOT NULL,
+    course_Codes VARCHAR(255) NOT NULL,
+    course_Units VARCHAR(255) NOT NULL,
+    scores VARCHAR(255) NOT NULL,
+    grades VARCHAR(255) NOT NULL,
+    cgp VARCHAR(4) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

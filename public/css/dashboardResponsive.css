@@ -1,0 +1,299 @@
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    body{
+        height: 100% !important;
+        display: block !important;
+        overflow: auto !important;
+    }
+    .sidebar{
+        display: none !important;
+    }
+
+    header{
+        padding: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    header h1{
+        font-size: 1.5em !important;
+    }
+
+    .logout{
+        display: none !important;
+    }
+
+    .menu_bar{
+        display: block !important;
+        font-size: 2em !important;
+        padding: 5px !important;
+        cursor: pointer !important;
+    }
+
+    .cardContainer .row{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .cardContainer .row .col{
+        margin-bottom: 15px !important;
+    }
+
+    .content-section h2{
+        font-size: 1.3em !important;
+    }
+
+    .content-section p{
+        font-size: .7em !important;
+    }
+
+    .card .card-text{
+        font-size: 1.6rem !important;
+    }
+
+    .card .card-text.user{
+        font-size: 4rem !important;
+    }
+
+    .card_Action_Container .card .card-body ul{
+        font-size: 14px !important;
+    }
+
+    .recent_Activities .card .card-body{
+        font-size: 14px !important;
+    }
+
+    .recent_Activities .card .card-body .btnCon{
+        text-align: right !important;
+        width: 100% !important;
+    }
+
+    .recent_Activities .card .card-body .btnCon button{
+        font-size: 14px !important;
+    }
+
+    .activities-today .row .col{
+        margin-bottom: 10px !important;
+    }
+
+    .mobile__footer{
+        display: block !important;
+        background: #2c3e50 !important;
+        padding: 8px !important;
+        text-align: center !important;
+        color: #ecf0f1 !important;
+        font-size: 12px !important;
+    }
+
+    .mobile-Sidebar-Container{
+        display: grid !important;
+        width: 100% !important;
+        height: 100vh !important;
+        grid-template-columns: 70% 30% !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: -100%;
+        z-index: 10 !important;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    .mobile-Sidebar-Container.show{
+        left: 0;
+        opacity: 1;
+    }
+
+    .mobile-Sidebar-Container .sidebar-mobile{
+        background: #2c3e50 !important;
+        color: #ecf0f1 !important;
+        padding: 15px;
+    }
+
+    .mobile-Sidebar-Container .sidebar-overlay{
+        background: #3333338f;
+        position: relative;
+    }
+
+    .sidebar-mobile .menuContainer{
+        width: 100%;
+    }
+
+    .menuContainer ul{
+        list-style: none;
+    }
+
+    .menuContainer ul li{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .menuContainer ul li:hover{
+        background-color: #34495e;
+    }
+
+    .menuContainer ul li.active{
+        background-color: #34495e;
+    }
+
+    .menuContainer ul li a{
+        color: #ecf0f1;
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+
+    .mobile-Sidebar-Container .close-sidebar{
+        position: absolute;
+        text-align: center;
+        padding: 10px;
+        top: 1rem;
+        right: .6rem;
+        color: #ecf0f1;
+        font-size: 1.5rem;
+        background: #2c3e50;
+        border: none;
+        height: 50px;
+        width: 50px;
+        border-radius: 8px;
+    }
+
+    .close-sidebar i{
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    body{
+        height: 100vh !important;
+        display: flex !important;
+        overflow: auto !important;
+    }
+    .sidebar{
+        width: 220px !important;
+        padding: 10px !important;
+    }
+
+    header{
+        padding: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    header h1{
+        font-size: 1.8em !important;
+    }
+
+    .logout{
+        display: block !important;
+    }
+
+    .menu_bar{
+        display: none !important;
+    }
+
+    .cardContainer .row{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .cardContainer .row .col{
+        margin-bottom: 15px !important;
+    }
+
+    .content-section h2{
+        font-size: 1.4em !important;
+    }
+
+    .content-section p{
+        font-size: .8em !important;
+    }
+
+    .card .card-text{
+        font-size: 2rem !important;
+    }
+
+    .card .card-text.user{
+        font-size: 4.5rem !important;
+    }
+
+    .card_Action_Container .card .card-body ul{
+        font-size: 15px !important;
+    }
+
+    .activities-today .row{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .activities-today .row .col{
+        margin-bottom: 15px !important;
+    }
+
+    .recent_Activities .card .card-body{
+        font-size: 15px !important;
+    }
+
+    .recent_Activities .card .card-body .btnCon{
+        text-align: right !important;
+        width: 100% !important;
+    }
+
+    .recent_Activities .card .card-body .btnCon button{
+        font-size: 15px !important;
+    }
+
+    .activities-today .row .col{
+        margin-bottom: 10px !important;
+    }
+
+    .mobile__footer{
+        display: none !important;
+    }
+
+    .mobile-Sidebar-Container{
+        display: none !important;
+    }
+
+    .mobile-Sidebar-Container.show{
+        display: none !important;
+    }
+
+    .mobile-Sidebar-Container .sidebar-mobile{
+        display: none !important;
+    }
+
+    .mobile-Sidebar-Container .sidebar-overlay{
+        display: none !important;
+    }
+
+    .sidebar-mobile .menuContainer{
+        display: none !important;
+    }
+
+    .menuContainer ul{
+        display: none !important;
+    }
+
+    .menuContainer ul li{
+        display: none !important;
+    }
+
+    .menuContainer ul li:hover{
+        display: none !important;
+    }
+
+    .menuContainer ul li.active{
+        display: none !important;
+    }
+
+    .menuContainer ul li a{
+        display: none !important;
+    }
+
+    .mobile-Sidebar-Container .close-sidebar{
+        display: none !important;
+    }
+
+    .close-sidebar i{
+        display: none !important;
+    }
+}
