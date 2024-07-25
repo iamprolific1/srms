@@ -144,7 +144,7 @@
                 <p>Use the form below to add a new result for a specific student. Please enter the correct details for each respective student.</p>
 
                 <div class="formContainer">
-                    <form action="#">
+                    <form id="form">
                         <div class="form-group">
                             <label for="studentName">Student Name:</label>
                             <input type="text" class="form-control" name="fullname" id="studentName" placeholder="Enter student's full name">
@@ -244,7 +244,7 @@
                                 </div>
                                 <div class="action_btns">
                                     <div class="button"><button class="btn btn-primary" id="nextBtn">Preview Result <i class="fa-solid fa-caret-right"></i></button></div>
-                                    <div class="button"><button class="btn btn-danger">Reset Form <i class="fa-solid fa-arrow-rotate-left"></i></button></div>
+                                    <div class="button"><button class="btn btn-danger">Reset Form <i class="fa-solid fa-arrow-rotate-left" id="resetForm"></i></button></div>
                                 </div>
                             </div>
                         </div>
@@ -254,6 +254,6 @@
         </main>
     </div>
 
-    <script src="./public/js/add_Results.js"></script>
+    <script src="./public/js/add__Results.js"></script>
 </body>
 </html>

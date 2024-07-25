@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const search_Student_Btn = document.querySelector(".search_student_btn");
     const alert_Container = document.getElementById("alert_container");
     const nextBtn = document.getElementById('nextBtn');
+    const resetFormBtn = document.getElementById('resetForm');
 
     //function to add event listeners to all the grade inputs
     function addGradeListener(input) {
@@ -87,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
     });
-
 
     //search student with ease using their matric number
     search_Student_Btn.addEventListener('click', async () => {
@@ -279,6 +279,16 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 
+    resetFormBtn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        resetForm();
+    })
+
+    function resetForm(){
+        const form = document.getElementById('form');
+        form.reset();
+    }
+
 
     //function that preview the data.
     function preview_Result_Data() {
@@ -436,4 +446,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return cgp;
     }
+    // alert('still working')
 });
