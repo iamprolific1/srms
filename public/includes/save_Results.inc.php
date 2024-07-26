@@ -10,6 +10,7 @@ function save_Result_Data(){
     $department = $data->department;
     $faculty = $data->faculty;
     $level = $data->level;
+    $semester = $data->semester;
     $academicSession = $data->academicSession;
     $courseCodes = json_encode($data->courseCodes); // Serialize arrays to JSON strings
     $courseUnits = json_encode($data->courseUnits);
@@ -20,13 +21,14 @@ function save_Result_Data(){
 
     try {
         // Build SELECT query to check for existing data
-        $checkQuery = "SELECT * FROM results WHERE student_Name = :name AND student_Matric_Number = :matricNumber AND student_Department = :department AND student_Faculty = :faculty AND student_Level = :level AND academic_Session = :examSession AND course_Codes = :courseCode AND course_Units = :courseUnit AND scores = :score AND grades = :grade AND cgp = :cgp";
+        $checkQuery = "SELECT * FROM results WHERE student_Name = :name AND student_Matric_Number = :matricNumber AND student_Department = :department AND student_Faculty = :faculty AND student_Level = :level AND semester = :semester AND academic_Session = :examSession AND course_Codes = :courseCode AND course_Units = :courseUnit AND scores = :score AND grades = :grade AND cgp = :cgp";
         $checkStmt = $conn->prepare($checkQuery);
         $checkStmt->bindParam(':name', $name);
         $checkStmt->bindParam(':matricNumber', $matricNumber);
         $checkStmt->bindParam(':department', $department);
         $checkStmt->bindParam(':faculty', $faculty);
         $checkStmt->bindParam(':level', $level);
+        $checkStmt->bindParam(':semester', $semester);
         $checkStmt->bindParam(':examSession', $academicSession);
         $checkStmt->bindParam(':courseCode', $courseCodes);
         $checkStmt->bindParam(':courseUnit', $courseUnits);
@@ -42,13 +44,14 @@ function save_Result_Data(){
         }
 
         // Insert new data
-        $query = "INSERT INTO results(student_Name, student_Matric_Number, student_Department, student_Faculty, student_Level, academic_Session, course_Codes, course_Units, scores, grades, cgp, created_at) VALUES(:name, :matricNumber, :department, :faculty, :level, :examSession, :courseCode, :courseUnit, :score, :grade, :cgp, :currentDate)";
+        $query = "INSERT INTO results(student_Name, student_Matric_Number, student_Department, student_Faculty, student_Level, semester, academic_Session, course_Codes, course_Units, scores, grades, cgp, created_at) VALUES(:name, :matricNumber, :department, :faculty, :level, :semester, :examSession, :courseCode, :courseUnit, :score, :grade, :cgp, :currentDate)";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':matricNumber', $matricNumber);
         $stmt->bindParam(':department', $department);
         $stmt->bindParam(':faculty', $faculty);
         $stmt->bindParam(':level', $level);
+        $stmt->bindParam(':semester', $semester);
         $stmt->bindParam(':examSession', $academicSession);
         $stmt->bindParam(':courseCode', $courseCodes);
         $stmt->bindParam(':courseUnit', $courseUnits);

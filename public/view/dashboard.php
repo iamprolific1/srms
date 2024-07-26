@@ -27,7 +27,9 @@
                     <ul>
                         <li class="active"><a href="/srms/dashboard" class="active">Dashboard</a></li>
                         <li><a href="/srms/add_student">Student Management</a></li>
+                        <li><a href="#viewStudents">View Students</a></li>
                         <li><a href="/srms/add_results">Result Management</a></li>
+                        <li><a href="/srms/view_results">View Results</a></li>
                         <li><a href="#settings">Settings</a></li>
                     </ul>
                 </div>
@@ -48,14 +50,12 @@
                 <ul>
                     <li><a href="/srms/dashboard" class="active">Dashboard</a></li>
                     <li><a href="/srms/add_student">Student Management</a></li>
+                    <li><a href="#viewStudents">View Students</a></li>
                     <li><a href="/srms/add_results">Result Management</a></li>
+                    <li><a href="/srms/view_results">Search Results</a></li>
                     <li><a href="#settings">Settings</a></li>
                 </ul>
             </nav>
-
-            <div class="footer">
-                &copy; 2024 Student Result Management System. All rights reserved.
-            </div>
         </aside>
         <main class="main-content">
             <header class="header shadow-sm">
@@ -93,7 +93,7 @@
                                     <p class="card-text user">
                                         <i class="fa-solid fa-square-poll-vertical"></i>
                                     </p>
-                                    <p class="card-text">
+                                    <p class="card-text" id="resultCount">
                                         0
                                     </p>
                                 </div>
@@ -187,6 +187,6 @@
         </main>
     </div>
 
-    <script src="./public/js/Dashboard.js"></script>
+    <script src="./public/js/dashboard.js"></script>
 </body>
 </html>

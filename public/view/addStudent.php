@@ -46,7 +46,9 @@
                 <ul>
                     <li><a href="/srms/dashboard">Dashboard</a></li>
                     <li><a href="/srms/add_student" class="active">Student Management</a></li>
+                    <li><a href="#viewStudents">View Students</a></li>
                     <li><a href="/srms/add_results">Result Management</a></li>
+                    <li><a href="/srms/view_results">Search Results</a></li>
                     <li><a href="#settings">Settings</a></li>
                 </ul>
             </nav>

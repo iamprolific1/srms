@@ -93,10 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
     drawCalendar(currentYear, currentMonth);
 
     const getStudentCount = async() =>{
-
         const res = await fetch('./public/includes/countStudent.inc.php')
         const data = await res.json();
-        console.log(data)
         if(data.error){
             console.log('Error Fetching data: ', data.error)
         }else{
@@ -105,7 +103,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    const getResultCount = async() =>{
+        const res = await fetch('./public/includes/countResult.inc.php')
+        const data = await res.json();
+        if(data.error){
+            console.log('Error Fetching data: ', data.error)
+        }else{
+            document.getElementById('resultCount').innerText = data.totalResults;
+        }
+    }
+
     getStudentCount();
     setInterval(getStudentCount, 2000);
+
+    getResultCount();
+    setInterval(getResultCount, 2000);
     
 });

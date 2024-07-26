@@ -27,3 +27,7 @@ route('/srms/add_student', function(){
 route('/srms/add_results', function(){
     require_once './public/view/addResults.php';
 });
+
+route('/srms/view_results', function(){
+    require_once './public/view/showResults.php';
+});

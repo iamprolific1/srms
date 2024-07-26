@@ -32,27 +32,31 @@
             <form action="#" class="w-100 p-2">
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-secondary text-white" id="basic-addon1">Fullname</span>
-                    <input type="text" class="form-control" disabled="true" placeholder="fullname" id="fullnamePreview" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" readonly placeholder="fullname" id="fullnamePreview" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-secondary text-white" id="basic-addon1">Matric Number</span>
-                    <input type="text" class="form-control" disabled="true" placeholder="matricNumber" id="matricNumberPreview" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" readonly placeholder="matricNumber" id="matricNumberPreview" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-secondary text-white" id="basic-addon1">Department</span>
-                    <input type="text" class="form-control" disabled="true" placeholder="department" id="departmentPreview" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" readonly placeholder="department" id="departmentPreview" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-secondary text-white" id="basic-addon1">Faculty</span>
-                    <input type="text" class="form-control" disabled="true" placeholder="faculty" id="facultyPreview" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" readonly placeholder="faculty" id="facultyPreview" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-secondary text-white" id="basic-addon1">Level</span>
-                    <input type="text" class="form-control" disabled="true" placeholder="level" id="levelPreview" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" readonly placeholder="level" id="levelPreview" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-secondary text-white" id="basic-addon1">Semester</span>
+                    <input type="text" class="form-control" readonly placeholder="semester" id="semesterPreview" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-secondary text-white" id="basic-addon1">EXAMINATION YEAR</span>
-                    <input type="text" class="form-control" disabled="true" placeholder="examination year" id="examinationYearPreview" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" readonly placeholder="examination year" id="examinationYearPreview" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="table_Container mt-2">
@@ -111,7 +115,9 @@
                 <ul>
                     <li><a href="/srms/dashboard">Dashboard</a></li>
                     <li><a href="/srms/add_student">Student Management</a></li>
+                    <li><a href="#viewStudents">View Students</a></li>
                     <li><a href="/srms/add_results" class="active">Result Management</a></li>
+                    <li><a href="/srms/view_results">Search Results</a></li>
                     <li><a href="#settings">Settings</a></li>
                 </ul>
             </nav>
@@ -219,6 +225,14 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="studentLevel">Semester:</label>
+                            <select name="semester" id="semester" class="form-control">
+                                <option value="">Select Semester</option>
+                                <option value="1st">1st</option>
+                                <option value="2nd">2nd</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="academicSession">Academic Session</label>
                             <input type="text" name="academicSession" class="form-control" id="academicSession" placeholder="Enter the academic session for result e.g. 2021/22">
                         </div>
@@ -254,6 +268,6 @@
         </main>
     </div>
 
-    <script src="./public/js/add__Results.js"></script>
+    <script src="./public/js/add-Results.js"></script>
 </body>
 </html>

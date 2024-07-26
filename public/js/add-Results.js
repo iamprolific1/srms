@@ -223,6 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     department: data.department,
                     faculty: data.faculty,
                     level: data.level,
+                    semester: data.semester,
                     academicSession: data.academicSession,
                     courseCodes: data.courseCodes,
                     courseUnits: data.courseUnits,
@@ -254,7 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     alert.remove();
                 }, 3000);
-                // document.querySelector(".preview_result").style.display = 'none';
+                setTimeout(()=>{
+                    document.querySelector(".preview_result").style.display = 'none';
+                    const form = document.getElementById("form");
+                    form.reset();
+                }, 1000)
             }else{
                 const preview_result_form = document.querySelector(".preview_result .preview_form")
                 const alertContainer = document.getElementById('preview_Result_Alert')
@@ -297,12 +302,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const departmentInput = document.getElementById("studentDepartment");
         const facultyInput = document.getElementById("studentFaculty");
         const levelInput = document.getElementById("studentLevel");
+        const semesterInput = document.getElementById('semester');
 
         let name = nameInput.value.trim();
         let matricNumber = matricNumberInput.value.trim();
         let department = departmentInput.value.trim();
         let faculty = facultyInput.value.trim();
         let level = levelInput.value.trim();
+        let semester = semesterInput.value.trim();
         let academicSession = document.getElementById("academicSession").value.trim();
 
         const courseCodes = Array.from(document.querySelectorAll(".courseCode")).map(input => input.value.trim());
@@ -316,6 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
             department: department,
             faculty: faculty,
             level: level,
+            semester: semester,
             academicSession: academicSession,
             courseCodes: courseCodes,
             courseUnits: courseUnits,
@@ -324,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
 
-        if (nameInput.value === '' || matricNumberInput.value === '' || departmentInput.value === '' || facultyInput.value === '' || levelInput.value === '' || courseCodes.includes('') || courseUnits.includes('' || scores.includes('') || grades.includes(''))) {
+        if (nameInput.value === '' || matricNumberInput.value === '' || departmentInput.value === '' || facultyInput.value === '' || levelInput.value === '' || semesterInput.value === '' || academicSession.value === '' || courseCodes.includes('') || courseUnits.includes('' || scores.includes('') || grades.includes(''))) {
             const alert = document.createElement('div');
             alert.classList.add('alert', 'alert-danger', 'text-center');
             alert.innerHTML = `
@@ -356,6 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const department_Input = document.querySelector('#departmentPreview')
             const faculty_Input = document.querySelector('#facultyPreview')
             const level_Input = document.querySelector('#levelPreview')
+            const semester_Input = document.querySelector('#semesterPreview')
             const examination_Year_Input = document.querySelector('#examinationYearPreview')
 
             
@@ -364,6 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
             department_Input.value = data.department;
             faculty_Input.value = data.faculty;
             level_Input.value = data.level;
+            semester_Input.value = data.semester;
             examination_Year_Input.value = data.academicSession;
 
             const closePopUpBtn = document.getElementById("closePopUpBtn");
