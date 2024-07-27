@@ -456,5 +456,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return cgp;
     }
-    // alert('still working')
 });
